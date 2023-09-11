@@ -13,11 +13,27 @@ public class RTSInputManager : MonoBehaviour
     [SerializeField]
     private Camera gameCamera;
 
+    private Camera HUDCamera;
+
+    private void Start()
+    {
+        HUDCamera = GameObject.FindGameObjectWithTag("HUDCamera")?.GetComponent<Camera>();
+    }
+
     void Update()
     {
         // Check for mouse click
         if (Input.GetMouseButtonDown(0))
         {
+            if (HUDCamera)
+            {
+                Ray HUDRay = HUDCamera.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(HUDRay, out hit))
+                {
+                    return;
+                }
+            }
+
             Ray ray = gameCamera.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit))
@@ -34,7 +50,7 @@ public class RTSInputManager : MonoBehaviour
                 {
                     if (selectedUnit)
                     {
-                        selectedUnit.navMeshAgent.SetDestination(hit.point);
+                        selectedUnit.MoveToPoint(hit.point);
                     }
                     else
                     {
