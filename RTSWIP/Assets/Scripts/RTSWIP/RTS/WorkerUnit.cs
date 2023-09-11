@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WorkerUnit : RTSUnit
+namespace RTSFramework.Interactables.Units
 {
+    public class WorkerUnit : RTSUnit
+    {
 
+    }
 }
+

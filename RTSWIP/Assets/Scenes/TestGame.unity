@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 53329900}
   - component: {fileID: 53329899}
   - component: {fileID: 53329898}
-  - component: {fileID: 53329901}
   m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
@@ -229,25 +228,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53329896}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &53329901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53329896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 648eb1a8e7da4da418dcfa24adf672ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitName: Unit
-  health: 100
-  maxHealth: 100
-  damage: 10
-  moveSpeed: 5
-  attackRange: 2
-  NavMeshAgent: {fileID: 0}
 --- !u!1 &154059822
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +377,6 @@ GameObject:
   - component: {fileID: 532204464}
   - component: {fileID: 532204463}
   - component: {fileID: 532204462}
-  - component: {fileID: 532204465}
   m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -491,25 +470,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532204460}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &532204465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532204460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 648eb1a8e7da4da418dcfa24adf672ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitName: Unit
-  health: 100
-  maxHealth: 100
-  damage: 10
-  moveSpeed: 5
-  attackRange: 2
-  NavMeshAgent: {fileID: 0}
 --- !u!1 &838285319
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +719,7 @@ GameObject:
   - component: {fileID: 1395449072}
   - component: {fileID: 1395449071}
   - component: {fileID: 1395449070}
+  - component: {fileID: 1395449075}
   - component: {fileID: 1395449074}
   - component: {fileID: 1395449073}
   m_Layer: 11
@@ -887,7 +848,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1395449068}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 648eb1a8e7da4da418dcfa24adf672ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a19871b00bd6f342a2783bacc092349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Unit
@@ -897,6 +858,21 @@ MonoBehaviour:
   moveSpeed: 5
   attackRange: 2
   NavMeshAgent: {fileID: 1395449073}
+--- !u!114 &1395449075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395449068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800b59a685622e64f9bb2593d7a1f83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableType: 1
+  RTSUnit: {fileID: 1395449074}
+  RTSBuilding: {fileID: 0}
 --- !u!1 &1498885708
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +887,7 @@ GameObject:
   - component: {fileID: 1498885710}
   - component: {fileID: 1498885713}
   - component: {fileID: 1498885714}
+  - component: {fileID: 1498885715}
   m_Layer: 11
   m_Name: Unit 1
   m_TagString: Untagged
@@ -1047,6 +1024,21 @@ MonoBehaviour:
   moveSpeed: 5
   attackRange: 2
   NavMeshAgent: {fileID: 1498885713}
+--- !u!114 &1498885715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498885708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800b59a685622e64f9bb2593d7a1f83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableType: 1
+  RTSUnit: {fileID: 1498885714}
+  RTSBuilding: {fileID: 0}
 --- !u!1 &1787431514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1051,6 @@ GameObject:
   - component: {fileID: 1787431518}
   - component: {fileID: 1787431517}
   - component: {fileID: 1787431516}
-  - component: {fileID: 1787431519}
   m_Layer: 10
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -1153,25 +1144,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787431514}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1787431519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1787431514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 648eb1a8e7da4da418dcfa24adf672ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitName: Unit
-  health: 100
-  maxHealth: 100
-  damage: 10
-  moveSpeed: 5
-  attackRange: 2
-  NavMeshAgent: {fileID: 0}
 --- !u!1 &1799255774
 GameObject:
   m_ObjectHideFlags: 0

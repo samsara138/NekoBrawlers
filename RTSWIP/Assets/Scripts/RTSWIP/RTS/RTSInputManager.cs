@@ -1,61 +1,90 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using RTSFramework.Interactables;
+using RTSFramework.Interactables.Units;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class RTSInputManager : MonoBehaviour
+namespace RTSFramework.InputSystem
 {
-    private RaycastHit hit;
 
-    private RTSUnit selectedUnit = null;
-
-    [SerializeField]
-    private Camera gameCamera;
-
-    private Camera HUDCamera;
-
-    private void Start()
+    public class RTSInputManager : MonoBehaviour
     {
-        HUDCamera = GameObject.FindGameObjectWithTag("HUDCamera")?.GetComponent<Camera>();
-    }
+        private RaycastHit hit;
 
-    void Update()
-    {
-        // Check for mouse click
-        if (Input.GetMouseButtonDown(0))
+        private RTSInteractable selectedInteractable = null;
+
+        [SerializeField]
+        private Camera gameCamera;
+
+        private Camera HUDCamera;
+
+        private void Start()
+        {
+            HUDCamera = GameObject.FindGameObjectWithTag("HUDCamera")?.GetComponent<Camera>();
+        }
+
+        void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                // First, if HUD is clicked, don't duplicate input to game
+                if (!HandleHUDInput())
+                {
+                    HandleGameInput();
+                }
+            }
+        }
+
+        private bool HandleHUDInput()
         {
             if (HUDCamera)
             {
-                Ray HUDRay = HUDCamera.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(HUDRay, out hit))
+                Vector2 mousePos = HUDCamera.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+                if (hit.collider != null)
                 {
-                    return;
+                    return true;
                 }
             }
+            return false;
+        }
 
+        private void HandleGameInput()
+        {
             Ray ray = gameCamera.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit))
             {
-                // Check if the object clicked has a selectable component (you can create your own)
-                RTSUnit clickedUnit = hit.collider.GetComponent<RTSUnit>();
 
-                if (clickedUnit)
+                RTSInteractable interable = hit.collider.gameObject.GetComponent<RTSInteractable>();
+                if (interable)
                 {
-                    selectedUnit = clickedUnit;
-                    Debug.Log(clickedUnit.gameObject.name);
+                    ClearSelection();
+                    switch (interable.InteractableType)
+                    {
+                        case InteractableType.Unit:
+                            selectedInteractable = interable;
+                            break;
+                        case InteractableType.Buliding:
+                            break;
+
+                    }
                 }
                 else
                 {
-                    if (selectedUnit)
+                    if (selectedInteractable)
                     {
-                        selectedUnit.MoveToPoint(hit.point);
+                        switch (selectedInteractable.InteractableType)
+                        {
+                            case InteractableType.None:
+                                break;
+                            case InteractableType.Unit:
+                                selectedInteractable.RTSUnit.MoveToPoint(hit.point);
+                                break;
+                            case InteractableType.Buliding:
+                                break;
+                        }
                     }
-                    else
-                    {
-                        ClearSelection();
-                    }
+
+
                 }
             }
             else
@@ -64,10 +93,11 @@ public class RTSInputManager : MonoBehaviour
                 ClearSelection();
             }
         }
+
+        private void ClearSelection()
+        {
+            selectedInteractable = null;
+        }
     }
 
-    private void ClearSelection()
-    {
-        selectedUnit = null;
-    }
 }
