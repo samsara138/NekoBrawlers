@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Core.CMV
+namespace Core.Pattern
 {
     public class Controller<ModelType, ViewType> where ModelType : Model where ViewType : View
     {

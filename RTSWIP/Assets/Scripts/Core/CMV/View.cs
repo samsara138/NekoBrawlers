@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Core.CMV
+namespace Core.Pattern
 {
     public class View : MonoBehaviour
     {
