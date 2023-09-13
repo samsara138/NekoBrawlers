@@ -1,4 +1,4 @@
-Library: E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+Library: E:\Programming\Sources\Unity\NekoBrawlers\NekoBrawlers\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --platform=Android
 --backend=burst-llvm-15
 --target=ARMV7A_NEON32
@@ -9,6 +9,7 @@ Library: E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\BurstOutput\tempburstli
 --target-framework=NetFramework
 --assembly-defines=UnityEngine;
 --assembly-defines=Assembly-CSharp;
+--assembly-defines=Gameplay;
 --assembly-defines=Unity.AI.Navigation;
 --assembly-defines=Unity.ScriptableBuildPipeline;
 --assembly-defines=Unity.Entities;
@@ -20,7 +21,6 @@ Library: E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\BurstOutput\tempburstli
 --assembly-defines=Unity.TextMeshPro;
 --assembly-defines=Unity.Profiling.Core;
 --assembly-defines=Unity.Mathematics.Extensions.Hybrid;
---assembly-defines=RTS;
 --assembly-defines=Unity.Burst;
 --assembly-defines=Unity.Transforms.Hybrid;
 --assembly-defines=Unity.Timeline;
@@ -58,10 +58,10 @@ Library: E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\BurstOutput\tempburstli
 --assembly-defines=System;
 --assembly-defines=mscorlib;
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\Burst
+--temp-folder=E:\Programming\Sources\Unity\NekoBrawlers\NekoBrawlers\Temp\Burst
 --key-folder=F:/Unity/2022.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Library\Burst
---output=E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+--decode-folder=E:\Programming\Sources\Unity\NekoBrawlers\NekoBrawlers\Library\Burst
+--output=E:\Programming\Sources\Unity\NekoBrawlers\NekoBrawlers\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobParallelForExtensions+ParallelForJobStruct`1[[Unity.Entities.EntityManager+RemapChunksFilteredJob, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.EntityManager+RemapChunksFilteredJob&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--133cdc8adea96c01df559b08afa2ef56
@@ -174,6 +174,7 @@ Library: E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\BurstOutput\tempburstli
 --target-framework=NetFramework
 --assembly-defines=UnityEngine;
 --assembly-defines=Assembly-CSharp;
+--assembly-defines=Gameplay;
 --assembly-defines=Unity.AI.Navigation;
 --assembly-defines=Unity.ScriptableBuildPipeline;
 --assembly-defines=Unity.Entities;
@@ -185,7 +186,6 @@ Library: E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\BurstOutput\tempburstli
 --assembly-defines=Unity.TextMeshPro;
 --assembly-defines=Unity.Profiling.Core;
 --assembly-defines=Unity.Mathematics.Extensions.Hybrid;
---assembly-defines=RTS;
 --assembly-defines=Unity.Burst;
 --assembly-defines=Unity.Transforms.Hybrid;
 --assembly-defines=Unity.Timeline;
@@ -223,10 +223,96 @@ Library: E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\BurstOutput\tempburstli
 --assembly-defines=System;
 --assembly-defines=mscorlib;
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\Burst
+--temp-folder=E:\Programming\Sources\Unity\NekoBrawlers\NekoBrawlers\Temp\Burst
 --key-folder=F:/Unity/2022.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Library\Burst
---output=E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+--decode-folder=E:\Programming\Sources\Unity\NekoBrawlers\NekoBrawlers\Library\Burst
+--output=E:\Programming\Sources\Unity\NekoBrawlers\NekoBrawlers\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+--pdb-search-paths=Temp/ManagedSymbols/
+
+--method=Unity.Entities.JobChunkExtensions+JobChunkProducer`1[[Unity.Scenes.SceneSectionStreamingSystem+SceneSectionStreamingSystem_34D9617_LambdaJob_0_Job, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.JobChunkExtensions+JobChunkWrapper`1[[Unity.Scenes.SceneSectionStreamingSystem+SceneSectionStreamingSystem_34D9617_LambdaJob_0_Job, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--ad1a29a8142a220d580d9e6f6e7c2da6
+--method=Unity.Transforms.LocalToWorldSystem, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnUpdate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--b6e1b61f57bfd30dd5446607bc07d512
+--method=Unity.Scenes.WeakAssetReferenceLoadingSystem, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnCreate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--0d949dc424e3bc2ea15b8daf7133dcf1
+--method=Unity.Jobs.IJobExtensions+JobStruct`1[[Unity.Transforms.ParentSystem+GatherChildEntities, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Transforms.ParentSystem+GatherChildEntities&, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--e3008ae576a40a379a47adfdca730503
+--method=Unity.Jobs.IJobExtensions+JobStruct`1[[Unity.Serialization.Json.JsonSerialization+ReadJob, Unity.Serialization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Serialization.Json.JsonSerialization+ReadJob&, Unity.Serialization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--50c4a55c4c4b423af8fd764cc0b40780
+--method=Unity.Entities.CompanionGameObjectUpdateTransformSystem, Unity.Transforms.Hybrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::RemoveDestroyedEntities(Unity.Entities.CompanionGameObjectUpdateTransformSystem+RemoveDestroyedEntitiesArgs&, Unity.Transforms.Hybrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)--9c7daa822bbdf33cd4497510dd4611fd
+--method=Unity.Jobs.IJobExtensions+JobStruct`1[[Unity.Transforms.ParentSystem+FindMissingChild, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Transforms.ParentSystem+FindMissingChild&, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--2a101b8d323ede408082178ee91b0e1a
+--method=Unity.Scenes.SceneSystem, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnUpdate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--13972850e8da93461652d98f2b8c30f6
+--method=Unity.Entities.JobChunkExtensions+JobChunkProducer`1[[Unity.Transforms.ParentSystem+GatherChangedParents, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.JobChunkExtensions+JobChunkWrapper`1[[Unity.Transforms.ParentSystem+GatherChangedParents, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--7b9b1faf4ca47d58c3c9750f6ff325be
+--method=Unity.Scenes.SceneSectionStreamingSystem, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ExtractEntityRemapRefs(Unity.Scenes.SceneSectionStreamingSystem+EntityRemapArgs&, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)--de1f87c63afdc45a1fa845b090713d07
+--method=Unity.Entities.JobChunkExtensions+JobChunkProducer`1[[Unity.Transforms.LocalToWorldSystem+ComputeChildLocalToWorldJob, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.JobChunkExtensions+JobChunkWrapper`1[[Unity.Transforms.LocalToWorldSystem+ComputeChildLocalToWorldJob, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--9e7635127991855fac31b535184f2d1c
+--method=Unity.Entities.JobChunkExtensions+JobChunkProducer`1[[Unity.Transforms.LocalToWorldSystem+ComputeRootLocalToWorldJob, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.JobChunkExtensions+JobChunkWrapper`1[[Unity.Transforms.LocalToWorldSystem+ComputeRootLocalToWorldJob, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--d75218db5dfdcc623eed8c53e4ab4870
+--method=UnityEngine.Jobs.IJobParallelForTransformExtensions+TransformParallelForLoopStruct`1[[Unity.Entities.CompanionGameObjectUpdateTransformSystem+CopyTransformJob, Unity.Transforms.Hybrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.CompanionGameObjectUpdateTransformSystem+CopyTransformJob&, Unity.Transforms.Hybrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--490e21906c966967c75cd3d8cb20901a
+--method=Unity.Transforms.TransformHelpers, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ComputeWorldTransformMatrix(Unity.Entities.Entity&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Mathematics.float4x4&, Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Entities.ComponentLookup`1[[Unity.Transforms.LocalTransform, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Entities.ComponentLookup`1[[Unity.Transforms.Parent, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Entities.ComponentLookup`1[[Unity.Transforms.PostTransformMatrix, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)--224dab9f17332d79f3fc75eb72b4b32d
+--method=Unity.Scenes.WeakAssetReferenceLoadingSystem, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnUpdate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--09a7642d475d3f87ea772b19dfed0fbe
+--method=Unity.Transforms.ParentSystem, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnCreate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--5cc79662db482e96110d010cd28ee367
+--method=Unity.Jobs.IJobExtensions+JobStruct`1[[Unity.Transforms.ParentSystem+FixupChangedChildren, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Transforms.ParentSystem+FixupChangedChildren&, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--405a22cfe68216b777044f37c6c718ce
+--method=Unity.Transforms.ParentSystem, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnUpdate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--b1fc953cfd90a4d59f065cdff02a8cad
+--method=Unity.Scenes.SceneSectionStreamingSystem+SceneSectionStreamingSystem_34D9617_LambdaJob_0_Job, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::RunWithoutJobSystem(Unity.Entities.EntityQuery&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--5a53bd49bed234d7a65b72057f5565c1
+--method=Unity.Scenes.WeakAssetReferenceLoadingSystem, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnDestroy(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--416a116f3b54fcd7ce247e95b82b51e5
+--method=Unity.Transforms.LocalToWorldSystem, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnCreate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--2c991a5049815fe2dd1d3d5b091a0e9e
+--platform=Android
+--backend=burst-llvm-15
+--target=ARMV7A_NEON32
+--global-safety-checks-setting=Off
+--meta-data-generation=False
+--dump=Function
+--float-precision=Standard
+--target-framework=NetFramework
+--assembly-defines=UnityEngine;
+--assembly-defines=Assembly-CSharp;
+--assembly-defines=Gameplay;
+--assembly-defines=Unity.AI.Navigation;
+--assembly-defines=Unity.ScriptableBuildPipeline;
+--assembly-defines=Unity.Entities;
+--assembly-defines=Unity.Entities.Hybrid;
+--assembly-defines=Unity.InternalAPIEngineBridge.002;
+--assembly-defines=Unity.Entities.Hybrid.HybridComponents;
+--assembly-defines=Unity.Collections;
+--assembly-defines=Unity.Deformations;
+--assembly-defines=Unity.TextMeshPro;
+--assembly-defines=Unity.Profiling.Core;
+--assembly-defines=Unity.Mathematics.Extensions.Hybrid;
+--assembly-defines=Unity.Burst;
+--assembly-defines=Unity.Transforms.Hybrid;
+--assembly-defines=Unity.Timeline;
+--assembly-defines=Unity.InputSystem;
+--assembly-defines=Unity.Transforms;
+--assembly-defines=Unity.Serialization;
+--assembly-defines=Unity.InputSystem.ForUI;
+--assembly-defines=Core;
+--assembly-defines=Unity.Entities.UI;
+--assembly-defines=Unity.Mathematics;
+--assembly-defines=Unity.Mathematics.Extensions;
+--assembly-defines=Unity.Scenes;
+--assembly-defines=Unity.Collections.LowLevel.ILSupport;
+--assembly-defines=Unity.Burst.Unsafe;
+--assembly-defines=System.Runtime;
+--assembly-defines=netstandard;
+--assembly-defines=Mono.Security;
+--assembly-defines=System.ComponentModel.Composition;
+--assembly-defines=System.Configuration;
+--assembly-defines=System.Core;
+--assembly-defines=System.Data.DataSetExtensions;
+--assembly-defines=System.Data;
+--assembly-defines=System.Drawing;
+--assembly-defines=System.EnterpriseServices;
+--assembly-defines=System.IO.Compression.FileSystem;
+--assembly-defines=System.IO.Compression;
+--assembly-defines=System.Net.Http;
+--assembly-defines=System.Numerics;
+--assembly-defines=System.Runtime.Serialization;
+--assembly-defines=System.Security;
+--assembly-defines=System.ServiceModel.Internals;
+--assembly-defines=System.Transactions;
+--assembly-defines=System.Xml.Linq;
+--assembly-defines=System.Xml;
+--assembly-defines=System;
+--assembly-defines=mscorlib;
+--generate-link-xml=Temp\burst.link.xml
+--temp-folder=E:\Programming\Sources\Unity\NekoBrawlers\NekoBrawlers\Temp\Burst
+--key-folder=F:/Unity/2022.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--decode-folder=E:\Programming\Sources\Unity\NekoBrawlers\NekoBrawlers\Library\Burst
+--output=E:\Programming\Sources\Unity\NekoBrawlers\NekoBrawlers\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobParallelForExtensions+ParallelForJobStruct`1[[Unity.Entities.Baking.BakeDependencies+CalculateActiveDependenciesJob, Unity.Entities.Hybrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.Baking.BakeDependencies+CalculateActiveDependenciesJob&, Unity.Entities.Hybrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--e9ade15c85327400eb76be54a4b6c1b8
@@ -329,90 +415,4 @@ Library: E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\BurstOutput\tempburstli
 --method=Unity.Jobs.IJobExtensions+JobStruct`1[[Unity.Collections.LowLevel.Unsafe.UnsafeDisposeJob, Unity.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Collections.LowLevel.Unsafe.UnsafeDisposeJob&, Unity.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--276b96e48754d7f5ba865bd7f5b37c11
 --method=Unity.Burst.Intrinsics.X86, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::DoGetCSRTrampoline()--89425a97f3f500fa810ad03f0c382542
 --method=Unity.Jobs.IJobExtensions+JobStruct`1[[Unity.Collections.NativeStream+ConstructJob, Unity.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Collections.NativeStream+ConstructJob&, Unity.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--b78f808503c8b5fe97a83e833bd5871d
---platform=Android
---backend=burst-llvm-15
---target=ARMV7A_NEON32
---global-safety-checks-setting=Off
---meta-data-generation=False
---dump=Function
---float-precision=Standard
---target-framework=NetFramework
---assembly-defines=UnityEngine;
---assembly-defines=Assembly-CSharp;
---assembly-defines=Unity.AI.Navigation;
---assembly-defines=Unity.ScriptableBuildPipeline;
---assembly-defines=Unity.Entities;
---assembly-defines=Unity.Entities.Hybrid;
---assembly-defines=Unity.InternalAPIEngineBridge.002;
---assembly-defines=Unity.Entities.Hybrid.HybridComponents;
---assembly-defines=Unity.Collections;
---assembly-defines=Unity.Deformations;
---assembly-defines=Unity.TextMeshPro;
---assembly-defines=Unity.Profiling.Core;
---assembly-defines=Unity.Mathematics.Extensions.Hybrid;
---assembly-defines=RTS;
---assembly-defines=Unity.Burst;
---assembly-defines=Unity.Transforms.Hybrid;
---assembly-defines=Unity.Timeline;
---assembly-defines=Unity.InputSystem;
---assembly-defines=Unity.Transforms;
---assembly-defines=Unity.Serialization;
---assembly-defines=Unity.InputSystem.ForUI;
---assembly-defines=Core;
---assembly-defines=Unity.Entities.UI;
---assembly-defines=Unity.Mathematics;
---assembly-defines=Unity.Mathematics.Extensions;
---assembly-defines=Unity.Scenes;
---assembly-defines=Unity.Collections.LowLevel.ILSupport;
---assembly-defines=Unity.Burst.Unsafe;
---assembly-defines=System.Runtime;
---assembly-defines=netstandard;
---assembly-defines=Mono.Security;
---assembly-defines=System.ComponentModel.Composition;
---assembly-defines=System.Configuration;
---assembly-defines=System.Core;
---assembly-defines=System.Data.DataSetExtensions;
---assembly-defines=System.Data;
---assembly-defines=System.Drawing;
---assembly-defines=System.EnterpriseServices;
---assembly-defines=System.IO.Compression.FileSystem;
---assembly-defines=System.IO.Compression;
---assembly-defines=System.Net.Http;
---assembly-defines=System.Numerics;
---assembly-defines=System.Runtime.Serialization;
---assembly-defines=System.Security;
---assembly-defines=System.ServiceModel.Internals;
---assembly-defines=System.Transactions;
---assembly-defines=System.Xml.Linq;
---assembly-defines=System.Xml;
---assembly-defines=System;
---assembly-defines=mscorlib;
---generate-link-xml=Temp\burst.link.xml
---temp-folder=E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\Burst
---key-folder=F:/Unity/2022.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Library\Burst
---output=E:\Programming\Sources\Unity\RTSWIP\RTSWIP\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
---pdb-search-paths=Temp/ManagedSymbols/
-
---method=Unity.Entities.JobChunkExtensions+JobChunkProducer`1[[Unity.Scenes.SceneSectionStreamingSystem+SceneSectionStreamingSystem_34D9617_LambdaJob_0_Job, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.JobChunkExtensions+JobChunkWrapper`1[[Unity.Scenes.SceneSectionStreamingSystem+SceneSectionStreamingSystem_34D9617_LambdaJob_0_Job, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--ad1a29a8142a220d580d9e6f6e7c2da6
---method=Unity.Transforms.LocalToWorldSystem, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnUpdate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--b6e1b61f57bfd30dd5446607bc07d512
---method=Unity.Scenes.WeakAssetReferenceLoadingSystem, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnCreate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--0d949dc424e3bc2ea15b8daf7133dcf1
---method=Unity.Jobs.IJobExtensions+JobStruct`1[[Unity.Transforms.ParentSystem+GatherChildEntities, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Transforms.ParentSystem+GatherChildEntities&, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--e3008ae576a40a379a47adfdca730503
---method=Unity.Jobs.IJobExtensions+JobStruct`1[[Unity.Serialization.Json.JsonSerialization+ReadJob, Unity.Serialization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Serialization.Json.JsonSerialization+ReadJob&, Unity.Serialization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--50c4a55c4c4b423af8fd764cc0b40780
---method=Unity.Entities.CompanionGameObjectUpdateTransformSystem, Unity.Transforms.Hybrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::RemoveDestroyedEntities(Unity.Entities.CompanionGameObjectUpdateTransformSystem+RemoveDestroyedEntitiesArgs&, Unity.Transforms.Hybrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)--9c7daa822bbdf33cd4497510dd4611fd
---method=Unity.Jobs.IJobExtensions+JobStruct`1[[Unity.Transforms.ParentSystem+FindMissingChild, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Transforms.ParentSystem+FindMissingChild&, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--2a101b8d323ede408082178ee91b0e1a
---method=Unity.Scenes.SceneSystem, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnUpdate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--13972850e8da93461652d98f2b8c30f6
---method=Unity.Entities.JobChunkExtensions+JobChunkProducer`1[[Unity.Transforms.ParentSystem+GatherChangedParents, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.JobChunkExtensions+JobChunkWrapper`1[[Unity.Transforms.ParentSystem+GatherChangedParents, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--7b9b1faf4ca47d58c3c9750f6ff325be
---method=Unity.Scenes.SceneSectionStreamingSystem, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ExtractEntityRemapRefs(Unity.Scenes.SceneSectionStreamingSystem+EntityRemapArgs&, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)--de1f87c63afdc45a1fa845b090713d07
---method=Unity.Entities.JobChunkExtensions+JobChunkProducer`1[[Unity.Transforms.LocalToWorldSystem+ComputeChildLocalToWorldJob, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.JobChunkExtensions+JobChunkWrapper`1[[Unity.Transforms.LocalToWorldSystem+ComputeChildLocalToWorldJob, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--9e7635127991855fac31b535184f2d1c
---method=Unity.Entities.JobChunkExtensions+JobChunkProducer`1[[Unity.Transforms.LocalToWorldSystem+ComputeRootLocalToWorldJob, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.JobChunkExtensions+JobChunkWrapper`1[[Unity.Transforms.LocalToWorldSystem+ComputeRootLocalToWorldJob, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--d75218db5dfdcc623eed8c53e4ab4870
---method=UnityEngine.Jobs.IJobParallelForTransformExtensions+TransformParallelForLoopStruct`1[[Unity.Entities.CompanionGameObjectUpdateTransformSystem+CopyTransformJob, Unity.Transforms.Hybrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.CompanionGameObjectUpdateTransformSystem+CopyTransformJob&, Unity.Transforms.Hybrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--490e21906c966967c75cd3d8cb20901a
---method=Unity.Transforms.TransformHelpers, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ComputeWorldTransformMatrix(Unity.Entities.Entity&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Mathematics.float4x4&, Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Entities.ComponentLookup`1[[Unity.Transforms.LocalTransform, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Entities.ComponentLookup`1[[Unity.Transforms.Parent, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Entities.ComponentLookup`1[[Unity.Transforms.PostTransformMatrix, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)--224dab9f17332d79f3fc75eb72b4b32d
---method=Unity.Scenes.WeakAssetReferenceLoadingSystem, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnUpdate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--09a7642d475d3f87ea772b19dfed0fbe
---method=Unity.Transforms.ParentSystem, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnCreate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--5cc79662db482e96110d010cd28ee367
---method=Unity.Jobs.IJobExtensions+JobStruct`1[[Unity.Transforms.ParentSystem+FixupChangedChildren, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Transforms.ParentSystem+FixupChangedChildren&, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--405a22cfe68216b777044f37c6c718ce
---method=Unity.Transforms.ParentSystem, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnUpdate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--b1fc953cfd90a4d59f065cdff02a8cad
---method=Unity.Scenes.SceneSectionStreamingSystem+SceneSectionStreamingSystem_34D9617_LambdaJob_0_Job, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::RunWithoutJobSystem(Unity.Entities.EntityQuery&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--5a53bd49bed234d7a65b72057f5565c1
---method=Unity.Scenes.WeakAssetReferenceLoadingSystem, Unity.Scenes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnDestroy(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--416a116f3b54fcd7ce247e95b82b51e5
---method=Unity.Transforms.LocalToWorldSystem, Unity.Transforms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::__codegen__OnCreate(System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--2c991a5049815fe2dd1d3d5b091a0e9e
 
