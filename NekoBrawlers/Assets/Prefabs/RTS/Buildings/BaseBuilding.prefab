@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8637962521888347230}
-  - component: {fileID: 2098598394565275837}
   - component: {fileID: 935618207888258600}
   - component: {fileID: 5178683443354450884}
   m_Layer: 11
@@ -38,24 +37,6 @@ Transform:
   - {fileID: 4357884327336322635}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2098598394565275837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2742113984298684343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 800b59a685622e64f9bb2593d7a1f83c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InteractableType: 2
-  RTSUnit: {fileID: 0}
-  RTSBuilding: {fileID: 935618207888258600}
-  Skills:
-  - {fileID: 2767328670330390775}
-  SelectionIndicator: {fileID: 2944157627797886138}
 --- !u!114 &935618207888258600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +49,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fcda6a773973b741a19d9384bbdad3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulidingName: Building
+  IteractableName: Base
+  InteractableType: 2
+  Skills:
+  - {fileID: 2767328670330390775}
+  SelectionIndicator: {fileID: 2944157627797886138}
+  IsSelected: 0
   Health: 100
   MaxHealth: 100
 --- !u!65 &5178683443354450884
@@ -174,6 +160,7 @@ MonoBehaviour:
   Icon: {fileID: 0}
   ProductionUnitPrefab: {fileID: 5025871961574803777, guid: 6e8cb1702955477418ef2485eb997444, type: 3}
   ProductionUnitSpawnPoint: {fileID: 5944751736936966063}
+  RallyPointPrefab: {fileID: 6897295697773547004, guid: a7725a6b7ddb9d34a998bf5152a32bc9, type: 3}
 --- !u!1001 &7880481083470043604
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,5 @@
+using RTSFramework.Interactables.Units;
 using RTSFramework.WorldManagment;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace RTSFramework.Interactables.Skills
@@ -13,10 +12,37 @@ namespace RTSFramework.Interactables.Skills
         [SerializeField]
         private Transform ProductionUnitSpawnPoint;
 
+        [SerializeField]
+        private GameObject RallyPointPrefab;
+
+        private GameObject RallyPointObjectBuf;
+
+        private Vector3 RallyPoint;
+
+        private void Start()
+        {
+            RallyPoint = ProductionUnitSpawnPoint.position;
+        }
+
+        public override void OnClickGround(Vector3 Point)
+        {
+            RallyPoint = Point;
+            RallyPointObjectBuf = RTSWorldManager.Instance.RTSObjectSpawner.SpawnObject(RallyPointPrefab, Point, Quaternion.identity, SpawnObjectType.Misc);
+        }
+
         public override void UseSkill()
         {
-            base.UseSkill();
-            RTSWorldManager.Instance.RTSObjectSpawner.SpawnUnit(ProductionUnitPrefab, ProductionUnitSpawnPoint);
+            GameObject obj = RTSWorldManager.Instance.RTSObjectSpawner.SpawnObject(ProductionUnitPrefab, ProductionUnitSpawnPoint, SpawnObjectType.Unit);
+            WorkerUnit unit = obj.GetComponent<WorkerUnit>();
+            if (unit != null)
+            {
+                unit.MoveToPoint(RallyPoint);
+            }
+        }
+
+        public override void OnDeselect()
+        {
+            Destroy(RallyPointObjectBuf);
         }
     }
 }
